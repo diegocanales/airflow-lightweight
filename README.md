@@ -130,7 +130,3 @@ docker-compose ps postgres
 ## Credits
 
 This setup is inspired by the article [How to Setup a Lightweight Local Version for Airflow](https://datatalks.club/blog/how-to-setup-lightweight-local-version-for-airflow.html) from DataTalks.Club.
-
-## License
-
-This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
