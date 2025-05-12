@@ -1,0 +1,25 @@
+{
+    "name": "Airflow Development",
+    "dockerComposeFile": "../docker-compose.yaml",
+    "service": "dev-environment",
+    "workspaceFolder": "/opt/airflow",
+    "shutdownAction": "stopCompose",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance",
+          "redhat.vscode-yaml"
+        ],
+        "settings": {
+          "python.defaultInterpreterPath": "/usr/local/bin/python",
+          "python.linting.enabled": true,
+          "python.linting.pylintEnabled": true,
+          "python.formatting.provider": "black",
+          "editor.formatOnSave": true
+        }
+      }
+    },
+    "remoteUser": "${localEnv:AIRFLOW_UID:-50000}",
+    "forwardPorts": [8080]
+  }

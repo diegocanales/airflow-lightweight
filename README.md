@@ -16,7 +16,7 @@ This setup uses Airflow's LocalExecutor instead of the more resource-intensive C
 ## Prerequisites
 
 - Docker and Docker Compose installed on your machine
-- At least 4GB of RAM allocated to Docker
+- At least 2GB of RAM allocated to Docker (recommended)
 - Git (for cloning this repository)
 
 ## Quick Start
@@ -63,7 +63,7 @@ To add Python dependencies, create a `requirements.txt` file and build a custom 
 
 1. Create a `Dockerfile`:
    ```dockerfile
-   FROM apache/airflow:3.0.0
+   FROM apache/airflow:2.10.5
    COPY requirements.txt /requirements.txt
    RUN pip install --user --upgrade pip
    RUN pip install --no-cache-dir --user -r /requirements.txt
@@ -77,7 +77,7 @@ To add Python dependencies, create a `requirements.txt` file and build a custom 
      &airflow-common
      build: .
      # Comment out the image line
-     # image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:3.0.0}
+     # image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.10.5}
    ```
 
 4. Build and start the services:
